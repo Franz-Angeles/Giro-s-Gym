@@ -20,16 +20,16 @@
 				if (current.length === 10) return; // already correct size
 				// Provide 10 sample users with realistic variation
 				const samples = [
-					{ name: "Alex Cruz", subscription: "member" },
-					{ name: "Brielle Santos", subscription: "monthly" },
-					{ name: "Carlos Mendoza", subscription: "walk-in" },
-					{ name: "Dana Lee", subscription: "member" },
-					{ name: "Evan Brooks", subscription: "monthly" },
-					{ name: "Faith Navarro", subscription: "walk-in" },
-					{ name: "Gio Ramirez", subscription: "member" },
-					{ name: "Harper Wang", subscription: "monthly" },
-					{ name: "Ivan Petrov", subscription: "walk-in" },
-					{ name: "Jade Kim", subscription: "member" },
+					{ name: "Sven Chavez", subscription: "member" },
+					{ name: "Franz Angeles", subscription: "monthly" },
+					{ name: "Price Agco", subscription: "walk-in" },
+					{ name: "Rhodmar Valenzuela", subscription: "member" },
+					{ name: "Thea Apostol", subscription: "monthly" },
+					{ name: "Jenny Villaula", subscription: "walk-in" },
+					{ name: "Coco Cutipie", subscription: "member" },
+					{ name: "Garfield Meow", subscription: "monthly" },
+					{ name: "Baby Orange", subscription: "walk-in" },
+					{ name: "Taylor Swiift", subscription: "member" },
 				];
 				const now = new Date();
 				const rng = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
