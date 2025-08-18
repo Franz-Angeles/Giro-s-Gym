@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Giro's Gym — Shop</title>
+
+		<meta name="description" content="Shop gym equipment and accessories at Giro's Gym." />
+		<link rel="icon" href="../SRC/IMG/giroslogo.jpg" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="../CSS/style.css" />
+		<link rel="stylesheet" href="../CSS/product.css" />
+
+		<script defer src="../JAVASCRIPT/main.js"></script>
+		<script defer src="../JAVASCRIPT/product.js"></script>
+	</head>
+	<body>
+		<a class="skip-link" href="#main">Skip to content</a>
+		<header id="top" class="site-header">
+			<div class="container nav-wrapper">
+				<a href="./Landingpage.html#top" class="brand" aria-label="Giro's Gym Home">
+					<img src="../SRC/IMG/giroslogo.jpg" alt="Giro's Gym logo" class="brand__logo" />
+					<span class="brand__name">Giro's Gym</span>
+				</a>
+
+				<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+
+				<nav class="nav" aria-label="Primary">
+					<ul>
+						<li><a href="./Landingpage.html#home">Home</a></li>
+						<li><a href="./Landingpage.html#classes">Classes</a></li>
+						<li><a href="./Landingpage.html#coaches">Coaches</a></li>
+						<li><a href="./Landingpage.html#membership">Membership</a></li>
+						<li><a href="./Landingpage.html#contact">Contact</a></li>
+					</ul>
+				</nav>
+
+						<div class="shop-actions hide-on-mobile">
+							<button id="cartBtn" class="btn btn--primary btn--sm" aria-haspopup="dialog" aria-controls="cartDrawer">
+						<i class="fa-solid fa-cart-shopping"></i>
+						<span>Cart</span>
+						<span id="cartCount" class="pill">0</span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<main id="main">
+					<section class="section">
+						<div class="container">
+							<div class="shop-head">
+								<header class="section__head">
+									<h2>Shop gear that boosts your training</h2>
+									<p class="muted">Quality equipment and essentials for every session.</p>
+								</header>
+								<div class="toolbar">
+									<label class="filter">
+										<span class="sr-only">Filter products by category</span>
+										<i class="fa-solid fa-filter"></i>
+										<select id="prodFilter" aria-label="Filter products by category">
+											<option value="all">All</option>
+											<option value="strength">Strength</option>
+											<option value="conditioning">Conditioning</option>
+											<option value="mobility">Mobility</option>
+											<option value="accessories">Accessories</option>
+											<option value="services">Services</option>
+										</select>
+									</label>
+								</div>
+							</div>
+
+							<div id="products" class="product-grid"></div>
+						</div>
+					</section>
+		</main>
+
+		<!-- Cart Drawer -->
+		<aside id="cartDrawer" class="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+			<div class="cart__inner">
+				<div class="cart__head">
+					<h3 id="cartTitle">Your Cart</h3>
+					<button id="cartClose" class="btn btn--ghost btn--sm" aria-label="Close cart">
+						<i class="fa-solid fa-xmark"></i>
+					</button>
+				</div>
+				<div id="cartItems" class="cart__items"></div>
+				<div class="cart__foot">
+					<div class="cart__total">
+						<span>Subtotal</span>
+						<strong id="cartTotal">0.00</strong>
+					</div>
+					<div class="cart__actions">
+						<button id="checkoutBtn" class="btn btn--primary">
+							<i class="fa-solid fa-bolt"></i>
+							Buy Now
+						</button>
+					</div>
+				</div>
+			</div>
+		</aside>
+		<div id="cartOverlay" class="overlay" hidden></div>
+
+		<footer class="site-footer">
+			<div class="container footer__inner">
+				<a href="./Landingpage.html#top" class="brand brand--small">
+					<img src="../SRC/IMG/giroslogo.jpg" alt="Giro's Gym logo" class="brand__logo" />
+					<span class="brand__name">Giro's Gym</span>
+				</a>
+				<p>© <span id="year"></span> Giro's Gym. All rights reserved.</p>
+			</div>
+		</footer>
+		<script>
+			document.getElementById('year').textContent = new Date().getFullYear();
+		</script>
+	</body>
+	</html>
