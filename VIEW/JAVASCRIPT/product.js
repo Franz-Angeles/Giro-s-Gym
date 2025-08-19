@@ -12,18 +12,19 @@
 
   const prodFilter = document.getElementById("prodFilter");
   const catalog = [
-    { id: "kb-16", name: "Kettlebell 16kg", desc: "Cast iron with powder coat", price: 59.99, icon: "fa-dumbbell", category: "strength" },
-    { id: "kb-24", name: "Kettlebell 24kg", desc: "Competition style", price: 79.99, icon: "fa-dumbbell", category: "strength" },
-    { id: "bb-20", name: "Barbell 20kg", desc: "Olympic 28mm, needle bearings", price: 199.0, icon: "fa-bars", category: "strength" },
-    { id: "pl-plate", name: "Bumper Plates (Pair)", desc: "Training plates, 10–25kg", price: 149.0, icon: "fa-circle", category: "strength" },
-    { id: "db-set", name: "Dumbbell Set", desc: "5–30kg rubber hex", price: 429.0, icon: "fa-dumbbell", category: "strength" },
-    { id: "yj-mat", name: "Yoga Mat", desc: "Non-slip, 6mm", price: 24.5, icon: "fa-grip-lines", category: "mobility" },
-    { id: "sk-rope", name: "Speed Jump Rope", desc: "Adjustable steel cable", price: 14.99, icon: "fa-person-running", category: "conditioning" },
-    { id: "rs-bands", name: "Resistance Bands Set", desc: "5 levels, latex", price: 21.99, icon: "fa-wave-square", category: "mobility" },
-    { id: "gs-gloves", name: "Gym Gloves", desc: "Breathable, anti-slip", price: 12.99, icon: "fa-hand-fist", category: "accessories" },
-    { id: "bt-bottle", name: "Water Bottle 1L", desc: "BPA-free", price: 9.99, icon: "fa-bottle-water", category: "accessories" },
-    { id: "gy-bag", name: "Gym Bag", desc: "Duffel, 35L", price: 34.99, icon: "fa-bag-shopping", category: "accessories" },
-    { id: "pt-sess", name: "PT Session", desc: "1-on-1 60 minutes", price: 39.0, icon: "fa-user-ninja", category: "services" },
+    { id: "yj-mat", name: "Yoga Mat", desc: "Non-slip, 6mm", price: 2450.00, img: "../SRC/IMG/yogamat.jpg", category: "accessories" },
+    { id: "sk-rope", name: "Speed Jump Rope", desc: "Adjustable steel cable", price: 1499.00, img: "../SRC/IMG/jumperope.jpg", category: "accessories" },
+    { id: "rs-bands", name: "Resistance Bands Set", desc: "5 levels, latex", price: 2199.00, img: "../SRC/IMG/resband.jpg", category: "accessories" },
+    { id: "gs-gloves", name: "Gym Gloves", desc: "Breathable, anti-slip", price: 1299.00, img: "../SRC/IMG/gloves.jpg", category: "accessories" },
+    { id: "bt-bottle", name: "Water Bottle 1L", desc: "BPA-free", price: 999.00, img: "../SRC/IMG/bottle.jpg", category: "accessories" },
+    { id: "gy-bag", name: "Gym Bag", desc: "Duffel, 35L", price: 3499.00, img: "../SRC/IMG/gymbag.jpg", category: "accessories" },
+    { id: "belt", name: "Weightlifting Belt", desc: "Padded, adjustable", price: 29.99, img: "../SRC/IMG/weigbelt.jpg", category: "accessories" },
+    { id: "lift-strap", name: "Lifting Straps", desc: "Neoprene, padded", price: 19.99, img: "../SRC/IMG/liftstrap.jpg", category: "accessories" },
+    { id: "wr-straps", name: "Wrist Straps", desc: "Supportive, adjustable", price: 14.99, img: "../SRC/IMG/wriststrap.jpg", category: "accessories" },
+    { id: "beef", name: "Beef", desc: "Lean Beef, Rice, Carrots, Green Beans, Broccoli", price: 499.99, img: "../SRC/IMG/beef.png", category: "foods" },
+    { id: "ch-breast", name: "Chicken Breast", desc: "Kamote, Chicken Breast, Broccoli", price: 299.99, img: "../SRC/IMG/chicken breast.jpg", category: "foods" },
+    { id: "salmon", name: "Salmon", desc: "Salmon Fillet, Broccoli, Kamote", price: 214.99, img: "../SRC/IMG/salmon.jpg", category: "foods" },
+    { id: "tilapia", name: "Tilapia", desc: "Tilapia Fillet, Broccoli, Carrots, Asparagus, Potato", price: 399.99, img: "../SRC/IMG/tilapia.jpg", category: "foods" },
   ];
 
   function money(n) {
@@ -42,7 +43,9 @@
     const items = catalog.filter(p => q === "all" ? true : p.category === q);
     productsEl.innerHTML = items.map(p => `
       <article class="product-card">
-        <div class="product-icon"><i class="fa-solid ${p.icon}"></i></div>
+        <div class="product-icon">
+          <img src="${p.img}" alt="${p.name}" class="product-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" />
+        </div>
         <div>
           <h3 class="product-name">${p.name}</h3>
           <p class="product-desc">${p.desc}</p>

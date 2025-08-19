@@ -32,8 +32,24 @@
   grid-template-rows: auto 1fr auto;
 }
 .product-icon {
-  width: 52px; height: 52px; border-radius: 12px; background: #17171f;
-  display: grid; place-items: center; border: 1px solid #262637; color: #e1e1ec; font-size: 1.2rem;
+  width: 100%;
+  height: 180px; /* rectangular banner */
+  border-radius: 14px;
+  background: #17171f;
+  display: block;
+  border: 1px solid #262637;
+  overflow: hidden; /* clip image to rounded corners */
+}
+@media (max-width: 560px) {
+  .product-icon { height: 150px; }
+}
+/* Ensure product photos fill the icon area and keep aspect nicely */
+.product-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 .product-name { margin: 0.6rem 0 0.2rem; font-weight: 700; }
 .product-desc { margin: 0; color: var(--muted); font-size: 0.95rem; }
@@ -72,3 +88,16 @@
 .cart__total { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem; }
 .cart__actions { display: flex; justify-content: flex-end; }
 .cart__actions .btn--primary { background: linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 100%); }
+
+/* Layout: keep footer at the bottom on the shop page */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+.site-footer {
+  margin-top: auto;
+}
