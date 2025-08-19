@@ -1,124 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Giro's Gym — User Management</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Giro's Gym — User Management</title>
 
-		<!-- SEO -->
-		<meta name="description" content="Manage members and subscriptions for Giro's Gym." />
-		<link rel="icon" href="../SRC/IMG/giroslogo.jpg" />
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Manage members and subscriptions for Giro's Gym."
+    />
+    <link rel="icon" href="../SRC/IMG/giroslogo.jpg" />
 
-		<!-- Fonts & Icons -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;800&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-			rel="stylesheet"
-		/>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
-		<!-- Styles -->
-		<link rel="stylesheet" href="../CSS/style.css" />
-		<link rel="stylesheet" href="../CSS/userman.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/userman.css" />
 
-		<!-- Scripts -->
-		<script defer src="../JAVASCRIPT/main.js"></script>
-		<script defer src="../JAVASCRIPT/userman.js"></script>
-	</head>
-	<body>
-		<a class="skip-link" href="#main">Skip to content</a>
+    <!-- Scripts -->
+    <script defer src="../JAVASCRIPT/main.js"></script>
+    <script defer src="../JAVASCRIPT/userman.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-		<header id="top" class="site-header">
-			<div class="container nav-wrapper">
-				<a href="./Landingpage.html#top" class="brand" aria-label="Giro's Gym Home">
-					<img src="../SRC/IMG/giroslogo.jpg" alt="Giro's Gym logo" class="brand__logo" />
-					<span class="brand__name">Giro's Gym</span>
-				</a>
+    <header id="top" class="site-header">
+      <div class="container nav-wrapper">
+        <a
+          href="./Landingpage.html#top"
+          class="brand"
+          aria-label="Giro's Gym Home"
+        >
+          <img
+            src="../SRC/IMG/giroslogo.jpg"
+            alt="Giro's Gym logo"
+            class="brand__logo"
+          />
+          <span class="brand__name">Giro's Gym</span>
+        </a>
 
-				<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
-				</button>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
 
-				<nav class="nav" aria-label="Primary">
-					<ul>
-						<li><a href="./Landingpage.html#home">Home</a></li>
-						<li><a href="./Landingpage.html#classes">Classes</a></li>
-						<li><a href="./Landingpage.html#coaches">Coaches</a></li>
-						<li><a href="./Landingpage.html#membership">Membership</a></li>
-						<li><a href="./Landingpage.html#contact">Contact</a></li>
-						<li><a aria-current="page" href="#main">Users</a></li>
-					</ul>
-				</nav>
-				<a href="./Landingpage.html#membership" class="btn btn--primary btn--sm hide-on-mobile">Join Now</a>
-			</div>
-		</header>
+        <nav class="nav" aria-label="Primary">
+          <ul>
+            <li><a href="./Landingpage.html#home">Home</a></li>
+            <li><a href="./Landingpage.html#membership">Membership</a></li>
+            <li><a href="./Landingpage.html#contact">Contact</a></li>
+            <li><a href="./product.html">Shop</a></li>
+            <li><a aria-current="page" href="#main">Customer Logs</a></li>
+          </ul>
+        </nav>
+        <a
+          href="./Landingpage.html#membership"
+          class="btn btn--primary btn--sm hide-on-mobile"
+          >Join Now</a
+        >
+      </div>
+    </header>
 
-		<main id="main">
-			<section class="section">
-				<div class="container">
-					<div class="page-head">
-						<div>
-							<h1>User Management</h1>
-							<p class="muted">Create and monitor member subscriptions.</p>
-						</div>
-						<div class="toolbar">
-							<label class="filter">
-								<span class="sr-only">Filter by subscription</span>
-								<i class="fa-solid fa-filter"></i>
-								<select id="filter" aria-label="Filter by subscription">
-									<option value="all">All</option>
-									<option value="walk-in">Walk-in</option>
-									<option value="monthly">Monthly</option>
-									<option value="member">Member</option>
-								</select>
-							</label>
-						</div>
-					</div>
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="page-head">
+            <div>
+              <h1>User Management</h1>
+              <p class="muted">Create and monitor member subscriptions.</p>
+            </div>
+            <div class="toolbar">
+              <label class="filter">
+                <span class="sr-only">Filter by subscription</span>
+                <i class="fa-solid fa-filter"></i>
+                <select id="filter" aria-label="Filter by subscription">
+                  <option value="all">All</option>
+                  <option value="walk-in">Walk-in</option>
+                  <option value="monthly">Monthly</option>
+                  <option value="member">Member</option>
+                </select>
+              </label>
+            </div>
+          </div>
 
-					<div class="panel">
-						<div class="table-head">
-							<h3 class="table-title">Users <span id="count" class="muted"></span></h3>
-						</div>
-						<div class="table-wrap">
-							<table class="table" aria-label="User list">
-								<thead>
-									<tr>
-										<th scope="col">Name</th>
-										<th scope="col">Subscription</th>
-										<th scope="col">Start</th>
-										<th scope="col">Due</th>
-										<th scope="col">Status</th>
-										<th scope="col" class="col-actions">Actions</th>
-									</tr>
-								</thead>
-								<tbody id="user-rows"></tbody>
-							</table>
-							<p id="empty" class="empty">No users to display.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+          <div class="panel">
+            <div class="table-head">
+              <h3 class="table-title">
+                Users <span id="count" class="muted"></span>
+              </h3>
+            </div>
+            <div class="table-wrap">
+              <table class="table" aria-label="User list">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Subscription</th>
+                    <th scope="col">Start</th>
+                    <th scope="col">Due</th>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="col-actions">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="user-rows"></tbody>
+              </table>
+              <p id="empty" class="empty">No users to display.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-		<footer class="site-footer">
-			<div class="container footer__inner">
-				<a href="./Landingpage.html#top" class="brand brand--small">
-					<img src="../SRC/IMG/giroslogo.jpg" alt="Giro's Gym logo" class="brand__logo" />
-					<span class="brand__name">Giro's Gym</span>
-				</a>
-				<p>© <span id="year"></span> Giro's Gym. All rights reserved.</p>
-			</div>
-		</footer>
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <a href="./Landingpage.html#top" class="brand brand--small">
+          <img
+            src="../SRC/IMG/giroslogo.jpg"
+            alt="Giro's Gym logo"
+            class="brand__logo"
+          />
+          <span class="brand__name">Giro's Gym</span>
+        </a>
+        <p>© <span id="year"></span> Giro's Gym. All rights reserved.</p>
+      </div>
+    </footer>
 
-		<script>
-			// Fallback year if JS bundle doesn't load
-			document.getElementById('year').textContent = new Date().getFullYear();
-		</script>
-	</body>
-	</html>
+    <script>
+      // Fallback year if JS bundle doesn't load
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
